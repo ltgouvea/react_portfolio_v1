@@ -8,7 +8,7 @@ import SEO from '../components/SEO';
 import SVG from '../components/SVG';
 import ProjectCard from '../components/ProjectCard';
 import { rotate, UpDown, UpDownWide, waveAnimation } from '../styles/animations';
-import { hidden } from '../styles/utils';
+import { hidden, list_description } from '../styles/utils';
 import { colors } from '../../tailwind';
 import triangle from '../images/triangle.svg';
 import avatar from '../images/avatar.jpg';
@@ -158,9 +158,9 @@ const Index = () => (
       <Content speed={0.4} offset={0}>
         <Hero>
           <BigTitle>
-            Hello, <br /> I'm John Doe.
+            Lucas Gouvêa
           </BigTitle>
-          <Subtitle>I'm creating noice web experiences for the next generation of consumer-facing companies.</Subtitle>
+          <Subtitle>FullStack Web Developer</Subtitle>
         </Hero>
       </Content>
       <DividerMiddle
@@ -171,7 +171,7 @@ const Index = () => (
       />
       <Content speed={0.4} offset={1.2} factor={2}>
         <Inner>
-          <Title>Projects</Title>
+          <Title>Projetos</Title>
           <ProjectsWrapper>
             <ProjectCard
               title="Freiheit"
@@ -250,18 +250,19 @@ const Index = () => (
         <Inner>
           <Title>About</Title>
           <AboutHero>
-            <Avatar src={avatar} alt="John Doe" />
+            <Avatar src={avatar} alt="Lucas Gouvêa" />
             <AboutSub>
-              The English language can not fully capture the depth and complexity of my thoughts. So I'm incorporating
-              Emoji into my speech to better express myself. Winky face.
+              I'm currently based in Bauru, SP, Brazil. I have experience with JS, JSX, Typescript (Angular/Ionic) and PHP; nowadays I'm studying
+              goLang and trying to know more about AI and machine learning.
             </AboutSub>
           </AboutHero>
           <AboutDesc>
-            You know the way you feel when you see a picture of two otters holding hands? That's how you're gonna feel
-            every day. My mother cried the day I was born because she knew she’d never be prettier than me. You should
-            make me your campaign manager. I was born for politics. I have great hair and I love lying. Captain? The
-            kids want to know where Paulie the Pigeon is. I told them he got sucked up into an airplane engine, is that
-            all right?
+            <ul>
+              <li className={list_description}>I have a cat named Fausto, or Faustinho.</li>
+              <li className={list_description}>I'm also a guitar player and have been teaching since I was 16. Right now I want to build my own guitar.</li>
+              <li className={list_description}>I played a lot of volleyball as a teenager and now my knees are gone</li>
+              <li className={list_description}>I've been using Linux for 15 years. And ONLY Linux for about 6 years.</li>
+            </ul>
           </AboutDesc>
         </Inner>
       </Content>
@@ -283,15 +284,15 @@ const Index = () => (
       </Divider>
       <Content speed={0.4} offset={4}>
         <Inner>
-          <Title>Get in touch</Title>
+          <Title>Make me rich! Make us BOTH rich.</Title>
           <ContactText>
-            Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a> or find me on other platforms:{' '}
-            <a href="https://dribbble.com/LekoArts">Dribbble</a> &{' '}
-            <a href="https://www.instagram.com/lekoarts.de/">Instagram</a>
+            Say <a href="mailto:lucas.fim@gmail.com">you wanna hire me today and have a nice conversation</a> or find me on other platforms:{' '}
+            <a href="https://www.github.com/ltgouvea">Github</a> &{' '}
+            <a href="https://linkedin.com/todo">Linkedin</a>
           </ContactText>
         </Inner>
         <Footer>
-          &copy; 2018 by Gatsby Starter Portfolio Cara.{' '}
+          &copy; 2018 by Gatsby Starter Portfolio Cara. All rights reserved. If they tell me to shut this down by copyright lawyers are far too expensive and I'm a nice guy.{' '}
           <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github Repository</a>.
         </Footer>
       </Content>
