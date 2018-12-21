@@ -74,6 +74,10 @@ const GetRich = styled.h1`
     animation: ${rotate} 4s linear infinite;
     left: -60px;
   }
+
+  @media (min-width: 10em) and (max-width: 60em) {
+    margin-top: 6em;
+  }
 `;
 
 const Subtitle = styled.p`
@@ -139,10 +143,33 @@ const ToolsWrapper = styled.div`
 
   img {
     ${tw('w-16 h-16')};
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  @media (min-width: 10em) and (max-width: 60em) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 10rem;
+    flex: 1 1 1;
   }
 `;
 
-const ColXsFour = styled.div``;
+const SkillList = styled.ul`
+  @media (min-width: 10em) and (max-width: 60em) {
+    column-count: 1;
+  }
+
+  column-count: 3;
+`;
+
+const ColXsFour = styled.div`
+  ${tw('flex-1 w-80')};
+`;
 
 const Footer = styled.footer`
   ${tw('text-center text-grey absolute pin-b p-6 font-sans text-md lg:text-lg')};
@@ -264,14 +291,14 @@ const Index = () => (
           <AboutHero>
             <Avatar src={avatar} alt="Lucas Gouvêa" />
             <AboutSub>
-              Atualmente estou em Bauru, SP. I'm currently based in Bauru, SP. Tenho experiência várias linguagens de
-              programação e alguns frameworks principalmente pra web; Meus estudos estão direcionados para goLang,
+              Atualmente estou em Bauru, SP. Tenho experiência várias linguagens de
+              programação e alguns frameworks, principalmente pra web; Meus estudos estão direcionados para goLang,
               programação funcional (clojure) e Inteligência Artificial (Data Science, Machine Learning).
             </AboutSub>
           </AboutHero>
           <AboutDesc>
             <h2>Habilidades</h2>
-            <ul>
+            <SkillList>
               <li className={listDescription}>Linux</li>
               <li className={listDescription}>Laravel</li>
               <li className={listDescription}>PHP</li>
@@ -279,12 +306,11 @@ const Index = () => (
               <li className={listDescription}>Typescript (Angular / Ionic)</li>
               <li className={listDescription}>JSX (React)</li>
               <li className={listDescription}>JS</li>
-              <li className={listDescription}>Expressões Regulares</li>
               <li className={listDescription}>Banco de Dados</li>
               <li className={listDescription}>Geoprocessamento</li>
               <li className={listDescription}>ShellScript</li>
-              <li className={listDescription}>RegEx</li>
-            </ul>
+              <li className={listDescription}>Expressões Regulares</li>
+            </SkillList>
             <h2>Ferramentas</h2>
             <ToolsWrapper>
               <ColXsFour>
