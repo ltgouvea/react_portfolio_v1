@@ -8,7 +8,7 @@ import SEO from '../components/SEO';
 import SVG from '../components/SVG';
 import ProjectCard from '../components/ProjectCard';
 import { rotate, UpDown, UpDownWide, waveAnimation } from '../styles/animations';
-import { hidden } from '../styles/utils';
+import { hidden, listDescription } from '../styles/utils';
 import { colors } from '../../tailwind';
 import triangle from '../images/triangle.svg';
 import avatar from '../images/avatar.jpg';
@@ -40,7 +40,7 @@ const Inner = styled.div`
 `;
 
 const BigTitle = styled.h1`
-  ${tw('text-5xl lg:text-6xl font-serif text-white mb-6 tracking-wide')};
+  ${tw('text-5xl lg:text-6xl font-sans text-white mb-6 tracking-wide')};
   text-shadow: 0 5px 35px rgba(255, 255, 255, 0.15);
 `;
 
@@ -57,6 +57,22 @@ const Title = styled.h1`
     animation: ${rotate} 4s linear infinite;
     left: -60px;
     top: 5px;
+  }
+`;
+
+const GetRich = styled.h1`
+  ${tw('text-4xl lg:text-4xl font-serif text-white mb-8 tracking-wide relative inline-block')};
+  margin-top: 5em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  &:before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: url(${triangle});
+    position: absolute;
+    background-size: 40px;
+    animation: ${rotate} 4s linear infinite;
+    left: -60px;
   }
 `;
 
@@ -116,6 +132,16 @@ const ContactText = styled.p`
   }
 `;
 
+const ToolsWrapper = styled.div`
+  ${tw('flex justify-around w-1/2 m-auto')};
+
+  img {
+    ${tw('w-16 h-16')};
+  }
+`;
+
+const ColXsFour = styled.div``;
+
 const Footer = styled.footer`
   ${tw('text-center text-grey absolute pin-b p-6 font-sans text-md lg:text-lg')};
   a {
@@ -157,10 +183,8 @@ const Index = () => (
       </Divider>
       <Content speed={0.4} offset={0}>
         <Hero>
-          <BigTitle>
-            Hello, <br /> I'm John Doe.
-          </BigTitle>
-          <Subtitle>I'm creating noice web experiences for the next generation of consumer-facing companies.</Subtitle>
+          <BigTitle>Lucas Gouvêa</BigTitle>
+          <Subtitle>FullStack Web Developer</Subtitle>
         </Hero>
       </Content>
       <DividerMiddle
@@ -171,35 +195,21 @@ const Index = () => (
       />
       <Content speed={0.4} offset={1.2} factor={2}>
         <Inner>
-          <Title>Projects</Title>
+          <Title>Projetos</Title>
           <ProjectsWrapper>
             <ProjectCard
-              title="Freiheit"
-              link="https://www.behance.net/gallery/58937147/Freiheit"
-              bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
+              title="Grupo Tesseract"
+              link="https://grupotesseract.com.br"
+              bg="linear-gradient(to bottom, #D4145A 0%, #FBB03B 100%)"
             >
-              This project is my entry to Adobe's #ChallengeYourPerspective contest.
+              Somos uma organização horizontal, transparente e mandamos muito bem.
             </ProjectCard>
             <ProjectCard
-              title="Harry Potter"
+              title="Portfolio BiaDM"
               link="https://www.behance.net/gallery/52915793/Harry-Potter"
-              bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
+              bg="linear-gradient(to bottom, #662D8C 0%, #ED1E79 100%)"
             >
-              I entered the DOCMA 2017 award with this Harry Potter inspired image.
-            </ProjectCard>
-            <ProjectCard
-              title="Tomb Raider"
-              link="https://www.behance.net/gallery/43907099/Tomb-Raider"
-              bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
-            >
-              Recreation of a Tomb Raider Wallpaper (Fan Art)
-            </ProjectCard>
-            <ProjectCard
-              title="Eagle"
-              link="https://www.behance.net/gallery/38068151/Eagle"
-              bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
-            >
-              A fantasy image manipulation relocating the habitat of wild animals.
+              Portfolio construído em React
             </ProjectCard>
           </ProjectsWrapper>
         </Inner>
@@ -248,20 +258,78 @@ const Index = () => (
       </Divider>
       <Content speed={0.4} offset={3}>
         <Inner>
-          <Title>About</Title>
+          <Title>Sobre</Title>
           <AboutHero>
-            <Avatar src={avatar} alt="John Doe" />
+            <Avatar src={avatar} alt="Lucas Gouvêa" />
             <AboutSub>
-              The English language can not fully capture the depth and complexity of my thoughts. So I'm incorporating
-              Emoji into my speech to better express myself. Winky face.
+              Atualmente estou em Bauru, SP. I'm currently based in Bauru, SP. Tenho experiência várias linguagens de
+              programação e alguns frameworks principalmente pra web; Meus estudos estão direcionados para goLang,
+              programação funcional (clojure) e Inteligência Artificial (Data Science, Machine Learning).
             </AboutSub>
           </AboutHero>
           <AboutDesc>
-            You know the way you feel when you see a picture of two otters holding hands? That's how you're gonna feel
-            every day. My mother cried the day I was born because she knew she’d never be prettier than me. You should
-            make me your campaign manager. I was born for politics. I have great hair and I love lying. Captain? The
-            kids want to know where Paulie the Pigeon is. I told them he got sucked up into an airplane engine, is that
-            all right?
+            <h2>Habilidades</h2>
+            <ul>
+              <li className={listDescription}>Linux</li>
+              <li className={listDescription}>Laravel</li>
+              <li className={listDescription}>PHP</li>
+              <li className={listDescription}>Vue</li>
+              <li className={listDescription}>Typescript (Angular / Ionic)</li>
+              <li className={listDescription}>JSX (React)</li>
+              <li className={listDescription}>JS</li>
+              <li className={listDescription}>Expressões Regulares</li>
+              <li className={listDescription}>Banco de Dados</li>
+              <li className={listDescription}>Geoprocessamento</li>
+              <li className={listDescription}>ShellScript</li>
+              <li className={listDescription}>RegEx</li>
+            </ul>
+            <h2>Ferramentas</h2>
+            <ToolsWrapper>
+              <ColXsFour>
+                <img alt="icons/html5.png" src="icons/html5.png" title="HTML5" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/css3.png" src="icons/css3.png" title="CSS3" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/js.png" src="icons/js.png" title="Javascript" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/php.png" src="icons/php.png" title="PHP" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/postgresql.png" src="icons/postgresql.png" title="PostgreSQL" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/postgis.png" src="icons/postgis.png" title="PostGIS" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/react.png" src="icons/react.png" title="React" />
+              </ColXsFour>
+            </ToolsWrapper>
+            <ToolsWrapper>
+              <ColXsFour>
+                <img alt="icons/vue.png" src="icons/vue.png" title="Vue" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/docker.png" src="icons/docker.png" title="Docker" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/aws.png" src="icons/aws.png" title="AWS" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/node.png" src="icons/node.png" title="Node" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/github.png" src="icons/github.png" title="Github" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/gitlab.png" src="icons/gitlab.png" title="Gitlab" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/git.png" src="icons/git.png" title="Git" />
+              </ColXsFour>
+            </ToolsWrapper>
           </AboutDesc>
         </Inner>
       </Content>
@@ -283,16 +351,16 @@ const Index = () => (
       </Divider>
       <Content speed={0.4} offset={4}>
         <Inner>
-          <Title>Get in touch</Title>
+          <GetRich>Deixe-me rico! E fique mais rico também</GetRich>
           <ContactText>
-            Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a> or find me on other platforms:{' '}
-            <a href="https://dribbble.com/LekoArts">Dribbble</a> &{' '}
-            <a href="https://www.instagram.com/lekoarts.de/">Instagram</a>
+            <a href="mailto:lucas.fim@gmail.com">Me Contrate (de livre e espontânea vontade)</a> ou veja mais
+            informações em outras plataformas: <a href="https://www.github.com/ltgouvea">Github</a>/
+            <a href="https://www.linkedin.com/in/lucas-gouv%C3%AAa-33150923/">Linkedin</a>
           </ContactText>
         </Inner>
         <Footer>
-          &copy; 2018 by Gatsby Starter Portfolio Cara.{' '}
-          <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github Repository</a>.
+          &copy; Todos os direitos reservados. Template:{' '}
+          <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github</a>.
         </Footer>
       </Content>
       <Divider speed={0.1} offset={4}>
