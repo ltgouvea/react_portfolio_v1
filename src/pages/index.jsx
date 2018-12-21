@@ -60,6 +60,22 @@ const Title = styled.h1`
   }
 `;
 
+const GetRich = styled.h1`
+  ${tw('text-4xl lg:text-4xl font-serif text-white mb-8 tracking-wide relative inline-block')};
+  margin-top: 5em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  &:before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: url(${triangle});
+    position: absolute;
+    background-size: 40px;
+    animation: ${rotate} 4s linear infinite;
+    left: -60px;
+  }
+`;
+
 const Subtitle = styled.p`
   ${tw('text-2xl lg:text-4xl font-sans text-white mt-8 xxl:w-3/4')};
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
@@ -115,6 +131,16 @@ const ContactText = styled.p`
     text-decoration: none;
   }
 `;
+
+const ToolsWrapper = styled.div`
+  ${tw('flex justify-around w-1/2 m-auto')};
+
+  img {
+    ${tw('w-16 h-16')};
+  }
+`;
+
+const ColXsFour = styled.div``;
 
 const Footer = styled.footer`
   ${tw('text-center text-grey absolute pin-b p-6 font-sans text-md lg:text-lg')};
@@ -236,20 +262,74 @@ const Index = () => (
           <AboutHero>
             <Avatar src={avatar} alt="Lucas Gouvêa" />
             <AboutSub>
-              Atualmente estou em Bauru, SP. I'm currently based in Bauru, SP. Tenho experiência com Geoprocessamento,
-              Banco de Dados, Expressões Regulares, JS, JSX (React), Typescript (Angular / Ionic), Vue, PHP e Linux;
-              Meus estudos estão direcionados para goLang, programação funcional (clojure) e Inteligência Artificial
-              (Data Science, Machine Learning).
+              Atualmente estou em Bauru, SP. I'm currently based in Bauru, SP. Tenho experiência várias linguagens de
+              programação e alguns frameworks principalmente pra web; Meus estudos estão direcionados para goLang,
+              programação funcional (clojure) e Inteligência Artificial (Data Science, Machine Learning).
             </AboutSub>
           </AboutHero>
           <AboutDesc>
+            <h2>Habilidades</h2>
             <ul>
-              <li className={listDescription}>Tenho um gato chamado Fausto</li>
-              <li className={listDescription}>
-                Joguei muito voleibol quando era mais novo e isso destruiu meus joelhos apesar de valer a pena
-              </li>
-              <li className={listDescription}>Uso Linux há 15 anos. E apenas Linux há 6.</li>
+              <li className={listDescription}>Linux</li>
+              <li className={listDescription}>Laravel</li>
+              <li className={listDescription}>PHP</li>
+              <li className={listDescription}>Vue</li>
+              <li className={listDescription}>Typescript (Angular / Ionic)</li>
+              <li className={listDescription}>JSX (React)</li>
+              <li className={listDescription}>JS</li>
+              <li className={listDescription}>Expressões Regulares</li>
+              <li className={listDescription}>Banco de Dados</li>
+              <li className={listDescription}>Geoprocessamento</li>
+              <li className={listDescription}>ShellScript</li>
+              <li className={listDescription}>RegEx</li>
             </ul>
+            <h2>Ferramentas</h2>
+            <ToolsWrapper>
+              <ColXsFour>
+                <img alt="icons/html5.png" src="icons/html5.png" title="HTML5" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/css3.png" src="icons/css3.png" title="CSS3" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/js.png" src="icons/js.png" title="Javascript" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/php.png" src="icons/php.png" title="PHP" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/postgresql.png" src="icons/postgresql.png" title="PostgreSQL" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/postgis.png" src="icons/postgis.png" title="PostGIS" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/react.png" src="icons/react.png" title="React" />
+              </ColXsFour>
+            </ToolsWrapper>
+            <ToolsWrapper>
+              <ColXsFour>
+                <img alt="icons/vue.png" src="icons/vue.png" title="Vue" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/docker.png" src="icons/docker.png" title="Docker" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/aws.png" src="icons/aws.png" title="AWS" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/node.png" src="icons/node.png" title="Node" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/github.png" src="icons/github.png" title="Github" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/gitlab.png" src="icons/gitlab.png" title="Gitlab" />
+              </ColXsFour>
+              <ColXsFour>
+                <img alt="icons/git.png" src="icons/git.png" title="Git" />
+              </ColXsFour>
+            </ToolsWrapper>
           </AboutDesc>
         </Inner>
       </Content>
@@ -271,7 +351,7 @@ const Index = () => (
       </Divider>
       <Content speed={0.4} offset={4}>
         <Inner>
-          <Title>Deixe-me rico! E fique mais rico também</Title>
+          <GetRich>Deixe-me rico! E fique mais rico também</GetRich>
           <ContactText>
             <a href="mailto:lucas.fim@gmail.com">Me Contrate (de livre e espontânea vontade)</a> ou veja mais
             informações em outras plataformas: <a href="https://www.github.com/ltgouvea">Github</a>/
