@@ -157,9 +157,7 @@ const Index = () => (
       </Divider>
       <Content speed={0.4} offset={0}>
         <Hero>
-          <BigTitle>
-            Lucas Gouvêa
-          </BigTitle>
+          <BigTitle>Lucas Gouvêa</BigTitle>
           <Subtitle>FullStack Web Developer</Subtitle>
         </Hero>
       </Content>
@@ -238,19 +236,18 @@ const Index = () => (
           <AboutHero>
             <Avatar src={avatar} alt="Lucas Gouvêa" />
             <AboutSub>
-              Atualmente estou em Bauru, SP.
-              I'm currently based in Bauru, SP.
-              Tenho experiência com Geoprocessamento, Banco de Dados,
-              Expressões Regulares, JS, JSX (React), Typescript (Angular / Ionic), Vue,
-              PHP e Linux;
-              Meus estudos estão direcionados para goLang, programação funcional (clojure) e
-              Inteligência Artificial (Data Science, Machine Learning).
+              Atualmente estou em Bauru, SP. I'm currently based in Bauru, SP. Tenho experiência com Geoprocessamento,
+              Banco de Dados, Expressões Regulares, JS, JSX (React), Typescript (Angular / Ionic), Vue, PHP e Linux;
+              Meus estudos estão direcionados para goLang, programação funcional (clojure) e Inteligência Artificial
+              (Data Science, Machine Learning).
             </AboutSub>
           </AboutHero>
           <AboutDesc>
             <ul>
               <li className={listDescription}>Tenho um gato chamado Fausto</li>
-              <li className={listDescription}>Joguei muito voleibol quando era mais novo e isso destruiu meus joelhos apesar de valer a pena</li>
+              <li className={listDescription}>
+                Joguei muito voleibol quando era mais novo e isso destruiu meus joelhos apesar de valer a pena
+              </li>
               <li className={listDescription}>Uso Linux há 15 anos. E apenas Linux há 6.</li>
             </ul>
           </AboutDesc>
@@ -276,13 +273,14 @@ const Index = () => (
         <Inner>
           <Title>Deixe-me rico! E fique mais rico também</Title>
           <ContactText>
-          <a href="mailto:lucas.fim@gmail.com">Me Contrate (de livre e espontânea vontade)</a> ou veja mais informações em outras plataformas:{' '}
-          <a href="https://www.github.com/ltgouvea">Github</a>/
-          <a href="https://www.linkedin.com/in/lucas-gouv%C3%AAa-33150923/">Linkedin</a>
+            <a href="mailto:lucas.fim@gmail.com">Me Contrate (de livre e espontânea vontade)</a> ou veja mais
+            informações em outras plataformas: <a href="https://www.github.com/ltgouvea">Github</a>/
+            <a href="https://www.linkedin.com/in/lucas-gouv%C3%AAa-33150923/">Linkedin</a>
           </ContactText>
         </Inner>
         <Footer>
-            &copy; Todos os direitos reservados. Template: <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github</a>.
+          &copy; Todos os direitos reservados. Template:{' '}
+          <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github</a>.
         </Footer>
       </Content>
       <Divider speed={0.1} offset={4}>
