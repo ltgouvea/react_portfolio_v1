@@ -8,7 +8,7 @@ import SEO from '../components/SEO';
 import SVG from '../components/SVG';
 import ProjectCard from '../components/ProjectCard';
 import { rotate, UpDown, UpDownWide, waveAnimation } from '../styles/animations';
-import { hidden, list_description } from '../styles/utils';
+import { hidden, listDescription } from '../styles/utils';
 import { colors } from '../../tailwind';
 import triangle from '../images/triangle.svg';
 import avatar from '../images/avatar.jpg';
@@ -40,7 +40,7 @@ const Inner = styled.div`
 `;
 
 const BigTitle = styled.h1`
-  ${tw('text-5xl lg:text-6xl font-serif text-white mb-6 tracking-wide')};
+  ${tw('text-5xl lg:text-6xl font-sans text-white mb-6 tracking-wide')};
   text-shadow: 0 5px 35px rgba(255, 255, 255, 0.15);
 `;
 
@@ -174,32 +174,18 @@ const Index = () => (
           <Title>Projetos</Title>
           <ProjectsWrapper>
             <ProjectCard
-              title="Freiheit"
-              link="https://www.behance.net/gallery/58937147/Freiheit"
-              bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
+              title="Grupo Tesseract"
+              link="https://grupotesseract.com.br"
+              bg="linear-gradient(to bottom, #D4145A 0%, #FBB03B 100%)"
             >
-              This project is my entry to Adobe's #ChallengeYourPerspective contest.
+              Somos uma organização horizontal, transparente e mandamos muito bem.
             </ProjectCard>
             <ProjectCard
-              title="Harry Potter"
+              title="Portfolio BiaDM"
               link="https://www.behance.net/gallery/52915793/Harry-Potter"
-              bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
+              bg="linear-gradient(to bottom, #662D8C 0%, #ED1E79 100%)"
             >
-              I entered the DOCMA 2017 award with this Harry Potter inspired image.
-            </ProjectCard>
-            <ProjectCard
-              title="Tomb Raider"
-              link="https://www.behance.net/gallery/43907099/Tomb-Raider"
-              bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
-            >
-              Recreation of a Tomb Raider Wallpaper (Fan Art)
-            </ProjectCard>
-            <ProjectCard
-              title="Eagle"
-              link="https://www.behance.net/gallery/38068151/Eagle"
-              bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
-            >
-              A fantasy image manipulation relocating the habitat of wild animals.
+              Portfolio construído em React
             </ProjectCard>
           </ProjectsWrapper>
         </Inner>
@@ -248,20 +234,24 @@ const Index = () => (
       </Divider>
       <Content speed={0.4} offset={3}>
         <Inner>
-          <Title>About</Title>
+          <Title>Sobre</Title>
           <AboutHero>
             <Avatar src={avatar} alt="Lucas Gouvêa" />
             <AboutSub>
-              I'm currently based in Bauru, SP, Brazil. I have experience with JS, JSX, Typescript (Angular/Ionic) and PHP; nowadays I'm studying
-              goLang and trying to know more about AI and machine learning.
+              Atualmente estou em Bauru, SP.
+              I'm currently based in Bauru, SP.
+              Tenho experiência com Geoprocessamento, Banco de Dados,
+              Expressões Regulares, JS, JSX (React), Typescript (Angular / Ionic), Vue,
+              PHP e Linux;
+              Meus estudos estão direcionados para goLang, programação funcional (clojure) e
+              Inteligência Artificial (Data Science, Machine Learning).
             </AboutSub>
           </AboutHero>
           <AboutDesc>
             <ul>
-              <li className={list_description}>I have a cat named Fausto, or Faustinho.</li>
-              <li className={list_description}>I'm also a guitar player and have been teaching since I was 16. Right now I want to build my own guitar.</li>
-              <li className={list_description}>I played a lot of volleyball as a teenager and now my knees are gone</li>
-              <li className={list_description}>I've been using Linux for 15 years. And ONLY Linux for about 6 years.</li>
+              <li className={listDescription}>Tenho um gato chamado Fausto</li>
+              <li className={listDescription}>Joguei muito voleibol quando era mais novo e isso destruiu meus joelhos apesar de valer a pena</li>
+              <li className={listDescription}>Uso Linux há 15 anos. E apenas Linux há 6.</li>
             </ul>
           </AboutDesc>
         </Inner>
@@ -284,16 +274,15 @@ const Index = () => (
       </Divider>
       <Content speed={0.4} offset={4}>
         <Inner>
-          <Title>Make me rich! Make us BOTH rich.</Title>
+          <Title>Deixe-me rico! E fique mais rico também</Title>
           <ContactText>
-            Say <a href="mailto:lucas.fim@gmail.com">you wanna hire me today and have a nice conversation</a> or find me on other platforms:{' '}
-            <a href="https://www.github.com/ltgouvea">Github</a> &{' '}
-            <a href="https://linkedin.com/todo">Linkedin</a>
+          <a href="mailto:lucas.fim@gmail.com">Me Contrate (de livre e espontânea vontade)</a> ou veja mais informações em outras plataformas:{' '}
+          <a href="https://www.github.com/ltgouvea">Github</a>/
+          <a href="https://www.linkedin.com/in/lucas-gouv%C3%AAa-33150923/">Linkedin</a>
           </ContactText>
         </Inner>
         <Footer>
-          &copy; 2018 by Gatsby Starter Portfolio Cara. All rights reserved. If they tell me to shut this down by copyright lawyers are far too expensive and I'm a nice guy.{' '}
-          <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github Repository</a>.
+            &copy; Todos os direitos reservados. Template: <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github</a>.
         </Footer>
       </Content>
       <Divider speed={0.1} offset={4}>
