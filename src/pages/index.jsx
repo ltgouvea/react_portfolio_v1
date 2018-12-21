@@ -118,10 +118,12 @@ const Avatar = styled.img`
 
 const AboutSub = styled.span`
   ${tw('text-white pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl')};
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 `;
 
 const AboutDesc = styled.p`
   ${tw('text-grey-light text-lg md:text-xl lg:text-2xl font-sans pt-6 md:pt-12 text-justify')};
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 `;
 
 const ContactText = styled.p`
